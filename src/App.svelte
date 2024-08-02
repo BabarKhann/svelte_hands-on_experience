@@ -16,6 +16,7 @@
 </script>
 
 <main>
+  <h1 class="text-3xl font-bold underline text-success">Hello world!</h1>
   <h2><strong>Reading the state</strong></h2>
   <pre>State without get: {JSON.stringify(state)}</pre>
   <pre>State with get: {JSON.stringify(get(state))}</pre>
