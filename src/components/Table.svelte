@@ -1,5 +1,15 @@
 <script>
   import { state } from "../state";
+
+  const toggle = (id) => {
+    $state.students = $state.students.map((student) => {
+      if (student.id === id) {
+        student.toggled = !student.toggled;
+      }
+
+      return student;
+    });
+  };
 </script>
 
 <table class="w-full">
@@ -17,14 +27,16 @@
   </thead>
   <tbody>
     {#each $state.students as student}
-      <tr>
+      <tr class={student.toggled ? "bg-accent/10" : ""}>
         <td>
-          <input type="checkbox" />
+          <input type="checkbox" on:click={() => toggle(student.id)} />
         </td>
         <td>{student.name}</td>
         <td>{student.phone}</td>
         <td>
-          <a href={`mailto:${student.email}`}>{student.email}</a>
+          <a href={`mailto:${student.email}`} class="text-primary underline"
+            >{student.email}</a
+          >
         </td>
         <td>{student.score}</td>
         <td>{student.age}</td>
@@ -34,3 +46,20 @@
     {/each}
   </tbody>
 </table>
+
+<style>
+  th,
+  td {
+    @apply py-2 px-5 border border-grey;
+  }
+
+  th:first-child,
+  td:first-child {
+    @apply border-l-0;
+  }
+
+  th:last-child,
+  td:last-child {
+    @apply border-r-0;
+  }
+</style>

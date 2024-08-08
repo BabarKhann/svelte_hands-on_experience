@@ -14,6 +14,17 @@ const initialState = {
       isActive: true,
       note: "Pariatur consequat sit duis id qui. Elit deserunt duis ea dolor deserunt consequat mollit tempor. Dolore do sit reprehenderit laboris et sunt magna ipsum sit.\r\n",
     },
+    {
+      id: "63468059c85a96bfad545fg7",
+      name: "Morris Flynn",
+      phone: "+1 (872) 414-3938",
+      email: "morrisflynn@datagene.com",
+      score: 1173,
+      age: 22,
+      registered: "2021-06-21T09:55:10 -02:00",
+      isActive: false,
+      note: "Pariatur consequat sit duis id qui. Elit deserunt duis ea dolor deserunt consequat mollit tempor. Dolore do sit reprehenderit laboris et sunt magna ipsum sit.\r\n",
+    },
   ],
 };
 

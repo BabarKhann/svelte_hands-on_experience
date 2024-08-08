@@ -7,7 +7,7 @@
     Student name - Age
   {:else}
     <a href="/" class="font-bold text-2xl gap-2 flex text-accent">
-      <img src="vite.svg" alt="" srcset="" />
+      <img src="vite.svg" alt="Vite Logo" srcset="" />
       Students Dashabord
     </a>
   {/if}
